@@ -12,6 +12,7 @@
     "@types/node": "^20.8.7"
   },
   "dependencies": {
+    "@types/config": "^3.3.2",
     "axios": "^1.5.1"
   }
 }
