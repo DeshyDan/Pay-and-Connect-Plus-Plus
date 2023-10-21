@@ -1,0 +1,11 @@
+{
+  "name": "pay-and-connect-plus-plus",
+  "version": "1.0.0",
+  "description": "An automcation programme for requesting vouchers at pay and connect uct",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deshy Dan",
+  "license": "ISC"
+}
