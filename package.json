@@ -4,15 +4,18 @@
   "description": "An automcation programme for requesting vouchers at pay and connect uct",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node server/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Deshy Dan",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.8.7"
+    "@types/node": "^20.8.7",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
   },
   "dependencies": {
-    "@types/config": "^3.3.2",
-    "axios": "^1.5.1"
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1"
   }
 }
