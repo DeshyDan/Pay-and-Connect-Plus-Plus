@@ -1,10 +1,10 @@
 import axios from "axios";
-import dotenv from 'dotenv';
-dotenv.config();
+import dotenv from "dotenv";
+dotenv.configDotenv();
 
 const requestURL: string =
     "https://uct.api.getslideapp.com/2/connect/vouchers/issue/";
-const authorizationToken: string = process.env.AUTHORIZATION_TOKEN;
+const authorizationToken = process.env.AUTHORIZATION_TOKEN;
 
 async function sendRequest() {
     try {
@@ -14,21 +14,18 @@ async function sendRequest() {
             {
                 headers: {
                     "Content-Type": "application/json",
-                    "Origin": "https://app.payandconnect.co.za",
-                    "Referer": "https://app.payandconnect.co.za/u/vouchers",
-                    "Authorization": authorizationToken ,
+                    Origin: "https://app.payandconnect.co.za",
+                    Referer: "https://app.payandconnect.co.za/u/vouchers",
+                    Authorization: authorizationToken,
                 },
             }
         );
-
-        return data;
     } catch (error) {
         if (axios.isAxiosError(error)) {
-            console.log("error message: ", error.message);
-            return error.message;
+            console.log("message: ", error.response?.data);
         } else {
             console.log("unexpected error: ", error);
-            return "An unexpected error occurred";
+        
         }
     }
 }

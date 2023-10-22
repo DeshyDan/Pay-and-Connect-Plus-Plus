@@ -4,7 +4,7 @@
   "description": "An automcation programme for requesting vouchers at pay and connect uct",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node server/index.ts",
+    "start": "ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Deshy Dan",
