@@ -4,7 +4,7 @@ run-name: Request voucher
 
 on: 
     schedule:
-        - cron: '45 20 * * 1-5'
+        - cron: '50 20 * * 1-5'
 jobs:
     build:
         runs-on: ubuntu-latest
