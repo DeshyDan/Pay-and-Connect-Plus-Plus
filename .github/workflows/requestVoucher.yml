@@ -2,9 +2,7 @@ name: Pay and connect Voucher Request
 
 run-name: Request voucher
 
-on: 
-    schedule:
-        - cron: '50 20 * * 1-5'
+on: [workflow_dispatch]
 jobs:
     build:
         runs-on: ubuntu-latest
