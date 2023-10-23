@@ -7,5 +7,5 @@ Sometimes (a lot of times actually) I forget to request a voucher, especially du
 
 ## How it works
 
-The application employs the Axios library to interface with the API endpoint, issuing a POST request to the payment and connection server while including an authorization token.
+The application employs the Axios library to interface with the API endpoint, issuing a POST request to the pay and connect server while including an authorization token.
 The program is scheduled to execute on weekdays, initiated by a cron scheduler within the GitHub Actions workflow.
