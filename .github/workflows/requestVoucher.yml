@@ -18,7 +18,6 @@ jobs:
             - name: Export token   
               run: |
                   touch .env
-                  ...
                   echo AUTHORIZATION_TOKEN=${{secrets.AUTHORIZATION_TOKEN}} >> .env
             - name: Run program
               run: npm start
