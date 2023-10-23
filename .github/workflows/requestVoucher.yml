@@ -18,7 +18,10 @@ jobs:
             - name: Install Dependecies
               run: npm install
             - name: Export token   
-              run: export AUTHORIZATION_TOKEN= ${{ secrets.AUTHORIZATION_TOKEN }}
+              run: |
+                  touch .env
+                  ...
+                  echo AUTHORIZATION_TOKEN=${{secrets.AUTHORIZATION_TOKEN}} >> .env
             - name: Run program
               run: npm start
                 
