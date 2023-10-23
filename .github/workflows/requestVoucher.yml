@@ -18,8 +18,14 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
+    - name: Setting the env file and running program
+      run: |
+       touch .env
+       echo AUTHORIZATION_TOKEN${{ secrets.AUTHORIZATION_TOKEN }} >> .env
+      
       env:
         AUTHORIZATION_TOKEN: ${{ secrets.AUTHORIZATION_TOKEN }}
+   
 
     - name: Run Program
       run: npm start
