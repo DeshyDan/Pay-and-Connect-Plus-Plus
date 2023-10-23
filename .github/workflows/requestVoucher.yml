@@ -1,0 +1,27 @@
+name: Pay and connect Voucher Request
+
+run-name: Request voucher
+
+on: 
+    schedule:
+        - cron: '0 22 * * 1,5'
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Set up Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: "18.15"
+           
+            - name: Install Dependecies
+              run: npm install
+              env:
+                AUTHORIZATION_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Export token   
+              run: export AUTHORIZATION_TOKEN=AUTHORIZATION_TOKEN
+            - name: Run program
+              run: npm start
+                
+            
