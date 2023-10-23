@@ -15,10 +15,9 @@ jobs:
            
             - name: Install Dependecies
               run: npm install
-            - name: Export token   
-              run: |
-                  touch .env
-                  echo AUTHORIZATION_TOKEN=${{secrets.AUTHORIZATION_TOKEN}} >> .env
+            - name: Set Environment Variable
+              run: echo "AUTHORIZATION_TOKEN=${{secrets.AUTHORIZATION_TOKEN}}" >> $GITHUB_ENV
+
             - name: Run program
               run: npm start
                 
