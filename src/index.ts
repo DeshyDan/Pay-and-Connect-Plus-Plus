@@ -5,7 +5,7 @@ dotenv.configDotenv();
 const requestURL: string =
     "https://uct.api.getslideapp.com/2/connect/vouchers/issue/";
 const authorizationToken = process.env.AUTHORIZATION_TOKEN;
-console.log( authorizationToken);
+console.log(  process.env);
 async function sendRequest() {
     try {
         const { data, status } = await axios.post(
