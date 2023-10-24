@@ -20,8 +20,7 @@ jobs:
       run: npm install
     - name: Setting the env file and running program
       run: |
-       touch .env
-       echo AUTHORIZATION_TOKEN${{ secrets.AUTHORIZATION_TOKEN }} >> .env
+       echo "AUTHORIZATION_TOKEN=$AUTHORIZATION_TOKEN" >> $GITHUB_ENV
       
       env:
         AUTHORIZATION_TOKEN: ${{ secrets.AUTHORIZATION_TOKEN }}
