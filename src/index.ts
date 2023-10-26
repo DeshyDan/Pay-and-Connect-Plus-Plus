@@ -20,6 +20,8 @@ async function sendRequest() {
                 },
             }
         );
+        console.log("Voucher has been requested");
+        console.log(data);
     } catch (error) {
         if (axios.isAxiosError(error)) {
             console.log("message: ", error.response?.data);
