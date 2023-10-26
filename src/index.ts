@@ -1,6 +1,6 @@
 import axios from "axios";
 import dotenv from "dotenv";
-dotenv.configDotenv();
+dotenv.config();
 
 const requestURL: string =
     "https://uct.api.getslideapp.com/2/connect/vouchers/issue/";
